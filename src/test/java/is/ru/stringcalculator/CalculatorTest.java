@@ -49,9 +49,15 @@ public class CalculatorTest {
     	catch (Exception e) {
     		String expectedMessage = "Negatives not allowed: -2";
     		assertEquals( "Exception message must be correct", expectedMessage, e.getMessage() );
-}   
+		}   
     }
 
+    @Test
+    public void testIgnoreLargeNumbers(){
+    	try {
+    	assertEquals(2, Calculator.add("1001,2"));
+    	}catch(Exception e){}
+    }
 
 
 }

@@ -7,7 +7,7 @@ public class Calculator {
 			return 0;
 		else if(text.contains(",") || (text.contains("\n"))){
 			return sum(splitNumbers(text));
-		}	
+		}
 		else
 			return 1;
 	}
@@ -25,8 +25,7 @@ public class Calculator {
  	    String negs = "";
         for(String number : numbers)
         {
-        	if(toInt (number) < 0)
-        	{
+        	if((toInt (number) < 0) || (toInt(number) > 1000)) {
         		if(negs != "")
         			negs += ",";
         		negs += number;
