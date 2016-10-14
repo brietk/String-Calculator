@@ -59,5 +59,11 @@ public class CalculatorTest {
     	}catch(Exception e){}
     }
 
+    @Test
+    public void testDelimiter(){
+    	try {
+    	assertEquals(24, Calculator.add("//;\n3;6;15"));
+    	}catch(Exception e){}
+    }
 
 }
